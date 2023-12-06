@@ -2,7 +2,8 @@ function createDragon(name, rider, temperment) {
 return {
   name: name,
   rider: rider,
-  temperment: temperment
+  temperment: temperment,
+  timesEaten: 0
 }
 };
 
