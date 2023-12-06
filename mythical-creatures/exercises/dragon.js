@@ -6,9 +6,14 @@ return {
 }
 };
 
+function greetRider(dragon) {
+return `Hi, ${dragon.rider}!`
+};
+
+
 module.exports = {
   createDragon, 
-  // greetRider, 
+  greetRider, 
   // eat, 
   // findFireBreathers
 }
