@@ -7,9 +7,7 @@ function createBirthday(name, month, day) {
 };
 
 function celebrateBirthday(birthdayArray) {
-    console.log('birthday object.month: ', birthdayArray.month)
     var birthdate = `${birthdayArray.month}/${birthdayArray.day}`
-    console.log('birthdate: ', birthdate)
     return `Today is ${birthdate}! Happy birthday, ${birthdayArray.name}!`
 };
 
@@ -21,16 +19,23 @@ function celebrateBirthday(birthdayArray) {
 //if the object's month is equal to the month passed in as an argument, add 1 (++) to the birthday count variable
 //return birthday count [a number] (this value will be assigned to the variable in which the function is being invoked in the test)
 function countBirthdays(birthdaysArray, month) {
-    // console.log('birth month: ', birthdaysArray[0].month)
     var birthdayCount = 0;
-    for (var i = 0; i < birthdaysArray.length; i++) {
-        console.log('Loop Test: ', i)
-        if (birthdaysArray[i].month === month) {
+    for (var object of birthdaysArray) {
+        if (object.month === month) {
             birthdayCount ++
         }
     }
-    console.log('birthdayCount:', birthdayCount);
-    return birthdayCount//a number
+    // birthdaysArray.forEach(function (birthday) {
+    //         if (birthday.month === month) {
+    //             birthdayCount ++
+    //         }
+    // } )
+    // for (var i = 0; i < birthdaysArray.length; i++) {
+        // if (birthdaysArray[i].month === month) {
+        //     birthdayCount ++
+        // }
+    // }
+    return birthdayCount
 };
 
 module.exports = {
