@@ -24,7 +24,7 @@ function eat(dragon) {
 };
 
 function findFireBreathers(dragonsArray) {
-  // for (var object in dragonsArray) {
+  // for (object in dragonsArray) {
   //   if (object.temperment === 'aggressive') {
   //     fireBreathers.push(object)
   //   }
