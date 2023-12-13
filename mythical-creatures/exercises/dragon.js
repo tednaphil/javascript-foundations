@@ -1,6 +1,6 @@
 function createDragon(name, rider, temperment) {
   return {
-    name, //syntactic sugar
+    name,
     rider,
     temperment,
     timesEaten: 0,
@@ -13,9 +13,6 @@ function greetRider(dragon) {
 };
 
 function eat(dragon) {
-  // console.log('dragon fed +1: ', dragon.timesEaten = dragon.timesEaten + 1);
-  // return dragon.timesEaten = (dragon.timesEaten + 1)
-  // console.log('dragon times eaten: ', dragon.timesEaten)
   dragon.timesEaten ++
   if (dragon.timesEaten >= 3) {
     dragon.hungry = false
@@ -24,13 +21,15 @@ function eat(dragon) {
 };
 
 function findFireBreathers(dragonsArray) {
-  // for (object in dragonsArray) {
-  //   if (object.temperment === 'aggressive') {
-  //     fireBreathers.push(object)
-  //   }
-  // } console.log('fireBreathers: ', fireBreathers)
-  //   return 
-}
+  var agressiveDragons = [];
+  dragonsArray.forEach((object) => 
+      {if(object.temperment === 'aggressive') {
+        agressiveDragons.push(object)
+        }
+      }
+  );
+  return agressiveDragons
+};
 
 module.exports = {
   createDragon, 
