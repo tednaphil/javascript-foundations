@@ -19,6 +19,16 @@ function cutHair(barber, haircut) {
     // console.log("barber's earnings: ", barber.earnings)
     // console.log('haircuts array: ', barber.haircuts)
     return barber
+};
+
+function listStyles(barber, length) {
+    var styleList = []
+    barber.haircuts.forEach((object => {
+        if (length === object.hairLength) {
+            styleList.push(object.style)
+        }
+    }))
+    return styleList
 }
 
 
@@ -26,5 +36,5 @@ module.exports = {
     createBarber,
     giveCompliment,
     cutHair,
-    // listStyles
+    listStyles
   };
