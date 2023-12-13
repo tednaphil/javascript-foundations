@@ -15,6 +15,8 @@ function cutHair(barber, haircut) {
     // console.log('haircut argument: ', haircut)
     // console.log('barber argument: ', barber)
     barber.haircuts.push(haircut);
+    barber.earnings += haircut.price;
+    // console.log("barber's earnings: ", barber.earnings)
     // console.log('haircuts array: ', barber.haircuts)
     return barber
 }
