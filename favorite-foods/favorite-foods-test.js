@@ -81,7 +81,7 @@ describe('favorite foods', function () {
    })
 
    // spicy 🌶️
-   it.skip('should be able to make a list of all ingredients needed for multiple dishes', function () {
+   it('should be able to make a list of all ingredients needed for multiple dishes', function () {
       var pizza = createFavoriteFood({ dish: 'Pizza', ingredients: ['Tomato Sauce', 'Cheese', 'Pepperoni', 'Mushrooms'], isSpicy: false });
       var smoothie = createFavoriteFood({ dish: 'Smoothie', ingredients: ['Banana', 'Strawberry', 'Blueberry', 'Milk', 'Honey'], isSpicy: false })
 
