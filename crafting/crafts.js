@@ -50,11 +50,41 @@ function addSupply(closetObject, materialObject) {
 // input: two objects
 // output: array of threads
 
+function createNewProject(materialsArray, status) {
+  return {
+    materialsNeeded: materialsArray,
+    status: status ||  `not started`
+  }
+}
+
+// input: array of objects, and a string
+//output: object with two known keys (materialsNeeded and status)
+
+function compareMaterials(projectObject, suppliesObject) {
+  // console.log(suppliesObject)
+  // console.log('supplies list: ', suppliesObject.supplies)
+  // console.log('materialsNeeded: ', projectObject.materialsNeeded)
+  var materialsNeeded = []
+  projectObject.materialsNeeded.forEach((object) => {materialsNeeded.push(object.name)})
+  // console.log('materialsNeeded array: ', materialsNeeded)
+  // console.log('supplies object array: ', suppliesObject.supplies)
+  // console.log('do these arrays match?', materialsNeeded === suppliesObject.supplies)
+  // console.log(suppliesObject.supplies.toString())
+      if (materialsNeeded.toString() === suppliesObject.supplies.toString()) {
+        return `Yay! You can start this project!`
+      } else {
+        return `Oh no! You need to go shopping before you can start this project!`
+      }
+}
+// input: two arguments, projectObject and suppliesObject(has a property
+//that's an array of objects)
+// output: string
+
 module.exports = {
   createMaterial,
   calculateMaterialCost,
   createSupplyCloset,
   addSupply,
-  // createNewProject,
-  // compareMaterials
+  createNewProject,
+  compareMaterials
 }
