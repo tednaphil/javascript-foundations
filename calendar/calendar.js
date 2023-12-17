@@ -24,13 +24,8 @@ function reportMonthlyEvents(calendarObject, month) {
             monthlyEvents.push(object)
         }
     })
-    // console.log(calendarObject.events)
     return monthlyEvents
 }
-
-// output: array of objects
-//declare a variable to store the monthly events
-// if the month is included in the calendar object, push to monthly events array
 
 module.exports = { 
     createEvent,
