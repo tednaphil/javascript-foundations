@@ -27,7 +27,23 @@ function createService(serviceName, cost) {
 };
 
 function bookServices(customerObject, serviceObject) {
-  
+  // var newBookings = customerObject.bookings
+  customerObject.bookings.push(serviceObject.name)
+  customerObject.bill += serviceObject.cost
+  // console.log(newBookings)
+  return customerObject
+};
+
+function applyGiftCard(servicesArray, giftCardAmount) {
+  affordableServices = []
+  console.log(`affordableServices before loop:`, affordableServices)
+  servicesArray.forEach((object) => {
+    if (object.price <= giftCardAmount) {
+      affordableServices.push(object.name)
+    }
+  })
+  console.log(`affordableServices after loop:`, affordableServices)
+  return affordableServices
 }
 
 module.exports = { 
@@ -35,5 +51,5 @@ module.exports = {
   greeting, 
   createService,
   bookServices, 
-  // applyGiftCard 
+  applyGiftCard 
 }
