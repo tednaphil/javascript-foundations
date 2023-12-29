@@ -18,9 +18,12 @@ function createSupplyCloset(supplyArray) {
     }
   } else {
   var supplyList = [];
-  for (var i = 0; i < supplyArray.length; i++) {
-    supplyList.push(supplyArray[i].name)
-  }
+  // for (var i = 0; i < supplyArray.length; i++) {
+  //   supplyList.push(supplyArray[i].name)
+  // }
+  supplyArray.forEach((object) => {
+    supplyList.push(object.name)
+  })
   return {
     supplies: supplyList
   }
