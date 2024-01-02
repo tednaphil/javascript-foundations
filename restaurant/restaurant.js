@@ -33,9 +33,6 @@ function cookMeal(orderObject, meal) {
     meal.complete = true
     orderObject.completedMeals.push(meal.name)
   }
-  // console.log(`is meal complete?`, meal.complete)
-  // console.log(orderObject.completedMeals)
-  // console.log(meal.name)
   return orderObject
 }
 
