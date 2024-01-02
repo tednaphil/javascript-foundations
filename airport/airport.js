@@ -31,7 +31,6 @@ function checkAirlineLocations(airportsArray, airline) {
       carriers.push(object.name)
     }
   })
-  console.log(carriers)
   return carriers
 }
 
